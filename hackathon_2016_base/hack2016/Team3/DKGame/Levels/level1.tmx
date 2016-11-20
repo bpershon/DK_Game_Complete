@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map height="1" nextobjectid="58" orientation="orthogonal" renderorder="right-down" tileheight="768" tilewidth="5376" version="1.0" width="1">
+ <tileset columns="1" firstgid="1" name="Tiles" tilecount="1" tileheight="10" tilewidth="50">
+  <image height="10" source="../Content/Background/levelBlock.png" width="50" />
+ </tileset>
+ <tileset columns="6" firstgid="2" name="banana_bunch" tilecount="6" tileheight="19" tilewidth="23">
+  <image height="19" source="../Content/Item/banana_bunch.png" width="138" />
+ </tileset>
+ <tileset columns="8" firstgid="8" name="banana_single" tilecount="8" tileheight="16" tilewidth="12">
+  <image height="16" source="../Content/Item/banana_single.png" width="96" />
+ </tileset>
+ <tileset columns="7" firstgid="16" name="balloon_life" tilecount="7" tileheight="58" tilewidth="23">
+  <image height="58" source="../Content/Item/balloon_life.png" width="161" />
+ </tileset>
+ <tileset columns="9" firstgid="23" name="barrel_check" tilecount="9" tileheight="38" tilewidth="29">
+  <image height="38" source="../Content/Item/barrel_check.png" width="261" />
+ </tileset>
+ <tileset columns="5" firstgid="32" name="barrel_dk" tilecount="5" tileheight="39" tilewidth="30">
+  <image height="39" source="../Content/Item/barrel_dk.png" width="150" />
+ </tileset>
+ <tileset columns="6" firstgid="37" name="barrel_reg" tilecount="6" tileheight="39" tilewidth="30">
+  <image height="39" source="../Content/Item/barrel_reg.png" width="180" />
+ </tileset>
+ <tileset columns="3" firstgid="43" name="crate_rambi" tilecount="3" tileheight="40" tilewidth="94">
+  <image height="40" source="../Content/Item/crate_rambi.png" width="282" />
+ </tileset>
+ <tileset columns="8" firstgid="46" name="token_ost" tilecount="8" tileheight="15" tilewidth="15">
+  <image height="15" source="../Content/Item/token_ost.png" width="120" />
+ </tileset>
+ <tileset columns="26" firstgid="54" name="token_letters" tilecount="26" tileheight="16" tilewidth="18">
+  <image height="16" source="../Content/Item/token_letters.png" width="468" />
+ </tileset>
+ <tileset columns="8" firstgid="80" name="enemy_gnawty" tilecount="8" tileheight="31" tilewidth="38">
+  <image height="31" source="../Content/Enemy/enemy_gnawty.png" width="304" />
+ </tileset>
+ <tileset columns="8" firstgid="88" name="enemy_klump" tilecount="8" tileheight="64" tilewidth="50">
+  <image height="64" source="../Content/Enemy/enemy_klump.png" width="400" />
+ </tileset>
+ <tileset columns="8" firstgid="96" name="enemy_kritter" tilecount="8" tileheight="42" tilewidth="51">
+  <image height="42" source="../Content/Enemy/enemy_kritter.png" width="408" />
+ </tileset>
+ <tileset columns="10" firstgid="104" name="enemy_necky" tilecount="10" tileheight="45" tilewidth="61">
+  <image height="45" source="../Content/Enemy/enemy_necky.png" width="610" />
+ </tileset>
+ <imagelayer name="Background">
+  <image height="768" source="../Content/Background/DKCMap.png" width="5376" />
+ </imagelayer>
+ <objectgroup name="Platforms">
+  <object gid="1" height="10" id="3" width="50" x="204.643" y="358.894" />
+  <object gid="1" height="10" id="4" width="50" x="254.565" y="358.894" />
+  <object gid="1" height="10" id="5" width="50" x="304.487" y="358.894" />
+  <object gid="1" height="10" id="6" width="50" x="353.3" y="358.894" />
+  <object gid="1" height="10" id="9" width="50" x="403" y="359" />
+  <object gid="1" height="10" id="11" width="50" x="452" y="359" />
+  <object gid="1" height="10" id="12" width="50" x="105" y="356" />
+  <object gid="1" height="10" id="13" width="50" x="95" y="351" />
+  <object gid="1" height="10" id="14" width="50" x="82" y="348" />
+  <object gid="1" height="10" id="16" width="50" x="155" y="359" />
+ </objectgroup>
+ <objectgroup name="ItemLayer">
+  <object gid="3" height="19" id="28" type="banana_bunch" width="23" x="75" y="150" />
+  <object gid="11" height="16" id="36" type="banana_single" width="12" x="150" y="150" />
+  <object gid="16" height="58" id="42" type="balloon_life" width="23" x="225" y="150" />
+  <object gid="23" height="38" id="43" type="barrel_check" width="29" x="300" y="150" />
+  <object gid="32" height="39" id="45" type="barrel_dk" width="30" x="375" y="150" />
+  <object gid="42" height="39" id="47" type="barrel_reg" width="30" x="450" y="150" />
+  <object gid="43" height="40" id="48" type="crate_rambi" width="94" x="525" y="150" />
+  <object gid="46" height="15" id="49" type="token_ost" width="15" x="600" y="150" />
+  <object gid="64" height="16" id="50" type="token_k" width="18" x="675" y="150" />
+ </objectgroup>
+ <objectgroup name="EnemyLayer">
+  <object gid="80" height="31" id="51" type="enemy_gnawty" width="38" x="250" y="300" />
+  <object gid="88" height="64" id="52" type="enemy_klump" width="50" x="375" y="300" />
+  <object gid="96" height="42" id="53" type="enemy_kritter" width="51" x="500" y="300" />
+  <object gid="104" height="45" id="54" type="enemy_necky" width="61" x="625" y="300" />
+ </objectgroup>
+</map>

@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C0C5C3B-89AF-4496-9F79-BC3C46EECE14}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DKGame</RootNamespace>
+    <AssemblyName>DKGame</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\IGameStateReceiver.cs" />
+    <Compile Include="Controllers\GameKeyboardController.cs" />
+    <Compile Include="Controllers\IGameController .cs" />
+    <Compile Include="GameObjects\Blocks\IslandBlock.cs" />
+    <Compile Include="GameObjects\Item\DKExitSign.cs" />
+    <Compile Include="GameObjects\Item\DKKongTileK.cs" />
+    <Compile Include="GameObjects\Item\DKKongTileG.cs" />
+    <Compile Include="GameObjects\Item\DKKongTileN.cs" />
+    <Compile Include="GameObjects\Item\DKKongTileO.cs" />
+    <Compile Include="GameObjects\Item\DKThrownBarrel.cs" />
+    <Compile Include="GameObjects\Item\Rambi.cs" />
+    <Compile Include="LevelManagement\CheckpointManager.cs" />
+    <Compile Include="LevelManagement\WorldManager.cs" />
+    <Compile Include="Physics\Bodies\IBody.cs" />
+    <Compile Include="Physics\Collision\Commands\EnemyCommands\EnemyDieByBarrelCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\ICommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerExitSignCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerRambiCollectCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerItemCollectCommand.cs" />
+    <Compile Include="Physics\Bodies\Body.cs" />
+    <Compile Include="Physics\Collision\CollisionEngine.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerDieCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerEnemySideColCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerKillEnemyCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerLevelBlockTopCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerPlayerBarrelCollisionCommand.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerStandardBarrelCollisionCommand.cs" />
+    <Compile Include="Physics\Collision\Contact.cs" />
+    <Compile Include="Physics\Collision\ContactSolver.cs" />
+    <Compile Include="Physics\Collision\EnemyCollisionHandler.cs" />
+    <Compile Include="Physics\Collision\EnemyCollisionHandlerLookupTable.cs" />
+    <Compile Include="Physics\Collision\PlayerCollisionHandler.cs" />
+    <Compile Include="GameObjects\Blocks\IBlock.cs" />
+    <Compile Include="GameObjects\Blocks\LevelBlock.cs" />
+    <Compile Include="GameObjects\Enemy\Necky.cs" />
+    <Compile Include="GameObjects\Enemy\Klump.cs" />
+    <Compile Include="GameObjects\Enemy\Kritter.cs" />
+    <Compile Include="GameObjects\Enemy\Gnawty.cs" />
+    <Compile Include="GameObjects\Enemy\IEnemy.cs" />
+    <Compile Include="GameObjects\IGameObject.cs" />
+    <Compile Include="Helpers\DKGameUtilities.cs" />
+    <Compile Include="GameObjects\Item\DKBalloon.cs" />
+    <Compile Include="GameObjects\Item\DKBanana.cs" />
+    <Compile Include="GameObjects\Item\DKBananaGroup.cs" />
+    <Compile Include="GameObjects\Item\DKCheckpointBarrel.cs" />
+    <Compile Include="GameObjects\Item\DKKongTile.cs" />
+    <Compile Include="GameObjects\Item\DKPlayerBarrel.cs" />
+    <Compile Include="GameObjects\Item\DKRambiCrate.cs" />
+    <Compile Include="GameObjects\Item\DKStandardBarrel.cs" />
+    <Compile Include="GameObjects\Item\DKTrophy.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerOpenRambiCrateCommand.cs" />
+    <Compile Include="Physics\Collision\PlayerCollisionHandlerLookupTable.cs" />
+    <Compile Include="Physics\Island.cs" />
+    <Compile Include="Physics\PhysicsWorld.cs" />
+    <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sound\SoundPool.cs" />
+    <Compile Include="ScoreSystem\ScoreSystem.cs" />
+    <Compile Include="Sprites\BackgroundSprite.cs" />
+    <Compile Include="GameObjects\Player\Player.cs" />
+    <Compile Include="States\DiddyStates\BarrelStates\DDBIdleState.cs" />
+    <Compile Include="States\DiddyStates\BarrelStates\DDBWalkingState.cs" />
+    <Compile Include="States\DiddyStates\BarrelStates\DDBJumpingState.cs" />
+    <Compile Include="States\DiddyStates\BarrelStates\DDBThrowingState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiChargeState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiDismountState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiJumpingState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDMountState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiRidingState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDDeadState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDPickupState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDCrouchingState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDIdleState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDJumpingState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDRollingState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDRunningState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDWalkingState.cs" />
+    <Compile Include="States\DonkeyStates\BarrelStates\DKBIdleState.cs" />
+    <Compile Include="States\DonkeyStates\BarrelStates\DKBJumpingState.cs" />
+    <Compile Include="States\DonkeyStates\BarrelStates\DKBWalkingState.cs" />
+    <Compile Include="States\DonkeyStates\BarrelStates\DKBThrowingState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiRidingState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiChargeState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiDismountState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiJumpingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKMountState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKDeadState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKPickupState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKJumpingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKCrouchingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKRollingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKRunningState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKWalkingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKIdleState.cs" />
+    <Compile Include="States\EnemyStates\EnemyDeadState.cs" />
+    <Compile Include="States\EnemyStates\EnemyWalkingState.cs" />
+    <Compile Include="States\EnemyStates\EnemyIdleState.cs" />
+    <Compile Include="States\Interfaces\IEnemyState.cs" />
+    <Compile Include="States\ItemStates\DKExitSignCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKExitSignIdleState.cs" />
+    <Compile Include="States\ItemStates\DKThrowBarrelBrokenState.cs" />
+    <Compile Include="States\ItemStates\DKThrownBarrelRollState.cs" />
+    <Compile Include="States\ItemStates\RambiCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKBalloonCollectedState.cs" />
+    <Compile Include="States\ItemStates\RambiIdleState.cs" />
+    <Compile Include="States\ItemStates\DKBalloonIdleState.cs" />
+    <Compile Include="States\ItemStates\DKBananaCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKBananaGroupCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKBananaGroupIdleState.cs" />
+    <Compile Include="States\ItemStates\DKBananaIdleState.cs" />
+    <Compile Include="States\ItemStates\DKCheckpointBarrelIdleState.cs" />
+    <Compile Include="States\ItemStates\DKKongTileCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKKongTileIdleState.cs" />
+    <Compile Include="States\ItemStates\DKPlayerBarrelRollState.cs" />
+    <Compile Include="States\ItemStates\DKPlayerBarrelIdleState.cs" />
+    <Compile Include="States\ItemStates\DKRambiCrateBrokenState.cs" />
+    <Compile Include="States\ItemStates\DKRambiCrateIdleState.cs" />
+    <Compile Include="States\ItemStates\DKStandardBarrelBrokenState.cs" />
+    <Compile Include="States\ItemStates\DKStandardBarrelIdleState.cs" />
+    <Compile Include="States\ItemStates\DKTrophyCollectedState.cs" />
+    <Compile Include="States\ItemStates\DKTrophyIdleState.cs" />
+    <Compile Include="DKGame.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Controllers\IUserInputController.cs" />
+    <Compile Include="GameObjects\Item\IItem.cs" />
+    <Compile Include="States\Interfaces\IItemState.cs" />
+    <Compile Include="States\Interfaces\IPlayerState.cs" />
+    <Compile Include="Sprites\ISprite.cs" />
+    <Compile Include="Factories\ISpriteFactory.cs" />
+    <Compile Include="Factories\ItemSpriteFactory.cs" />
+    <Compile Include="Factories\EnemySpriteFactory.cs" />
+    <Compile Include="Factories\PlayerSpriteFactory.cs" />
+    <Compile Include="Sprites\GenericSprite.cs" />
+    <Compile Include="LevelParser\DKLevelParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\IUserInputReceiver.cs" />
+    <Compile Include="Controllers\GamePadController.cs" />
+    <Compile Include="Controllers\UserKeyboardController.cs" />
+    <Compile Include="Drawing\DKDrawingPipeline.cs" />
+    <Compile Include="Sprites\ISpriteDelegate.cs" />
+    <Compile Include="States\PlayerStates\IPlayerStateTransitionSet.cs" />
+    <Compile Include="States\PlayerStates\PlayerTransitionState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBIdleState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBJumpingState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBThrowingState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBWalkingState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBaseStateBarrel.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerBaseStateRambi.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiChargeState.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiDismountState.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiJumpingState.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiRidingState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerBaseStateRegular.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerCrouchingState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerDeadState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerIdleState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerJumpingState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerMountState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerPickupState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerRollingState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerRunningState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerWalkingState.cs" />
+    <Compile Include="States\DiddyStates\DDStateTransitionSet.cs" />
+    <Compile Include="States\DonkeyStates\DKStateTransitionSet.cs" />
+    <Compile Include="States\PlayerStates\PlayerBaseState.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiIdleState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiIdleState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiIdleState.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDFallingState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKFallingState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerFallingState.cs" />
+    <Compile Include="States\DiddyStates\BarrelStates\DDBFallingState.cs" />
+    <Compile Include="States\DonkeyStates\BarrelStates\DKBFallingState.cs" />
+    <Compile Include="States\PlayerStates\BarrelStates\PlayerBFallingState.cs" />
+    <Compile Include="States\DiddyStates\RambiStates\DDRambiFallingState.cs" />
+    <Compile Include="States\DonkeyStates\RambiStates\DKRambiFallingState.cs" />
+    <Compile Include="States\PlayerStates\RambiStates\PlayerRambiFallingState.cs" />
+    <Compile Include="Factories\FontFactory.cs" />
+    <Compile Include="States\DiddyStates\RegularStates\DDWinState.cs" />
+    <Compile Include="States\DonkeyStates\RegularStates\DKWinState.cs" />
+    <Compile Include="States\PlayerStates\RegularStates\PlayerWinState.cs" />
+    <Compile Include="GameObjects\Item\DKTeleporter.cs" />
+    <Compile Include="Physics\Collision\Commands\PlayerCommands\PlayerTeleportCommand.cs" />
+    <Compile Include="Drawing\DKAreaPropertyLookup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.5.1.1679\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Background\DKCMap.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Background\levelBlock.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\balloon_life.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\banana_bunch.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\banana_single.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_check.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_dk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_reg.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_reg_break.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_reg_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\barrel_reg_roll_start.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\crate_rambi.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\sign_arrow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\sign_exit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\sign_intro.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\tire.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_doph.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_doph_collected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_frog.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_frog_collected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_letters.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_ost.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_ost_collected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_rhino.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Item\token_rhino_collected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_barrel_pickup.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_barrel_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_bonus_win.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_crouch.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_damaged.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_game_lose.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_riding_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_riding_still.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_run.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_standing_edge.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_standing_still.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_swap_follow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_swap_lead.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_barrel_pickup.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_barrel_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_crouch.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_damaged.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_riding_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_riding_still.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_run.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_standing_still.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_swap_follow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_swap_lead.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Enemy\enemy_gnawty.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Enemy\enemy_klump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Enemy\enemy_kritter.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Enemy\enemy_necky.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\banana.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\banana_bunch.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\barrel_break.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\barrel_roll.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\barrel_save.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\letter_g.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\letter_k.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\letter_n.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\letter_o.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\life_gained.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\trophy_1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\trophy_2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\trophy_3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Collectible\trophy_all.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Enemy\gnawty_die.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Enemy\klump_die.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Enemy\kritter_die.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Enemy\necky_die.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Miscellaneous\04-dk-island-swing.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Miscellaneous\menu_accept.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Miscellaneous\menu_move.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Player\diddy_hit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Player\dk_hit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Player\dk_land.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Player\dk_victory.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Player\switch_player.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Rambi\rambi_attack.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Rambi\rambi_crate_open.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sound\Rambi\rambi_jump.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Levels\level1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Levels\fullLevel1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Content.mgcb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Item\rambi_idle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_ridingrambi_hit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_ridingrambi_idle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_ridingrambi_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_ridingrambi_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_ridingrambi_walk.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_ridingrambi_hit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_ridingrambi_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_ridingrambi_idle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_ridingrambi_dismount.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_ridingrambi_dismount.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_barrel_throw_pt1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_barrel_throw_pt2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_barrel_throw_pt1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_barrel_throw_pt2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Enemy\enemy_necky_projectile.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Diddy\dd_win.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Player\Donkey\dk_win.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Sound\Collectible\banana.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\banana_bunch.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\barrel_break.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\barrel_roll.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\barrel_save.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\letter_g.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\letter_k.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\letter_n.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\letter_o.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\life_gained.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\trophy_1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\trophy_2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\trophy_3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Collectible\trophy_all.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Enemy\gnawty_die.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Enemy\klump_die.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Enemy\kritter_die.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Enemy\necky_die.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Miscellaneous\04-dk-island-swing.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Miscellaneous\menu_accept.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Miscellaneous\menu_move.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Player\diddy_hit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Player\dk_hit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Player\dk_land.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Player\dk_victory.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Player\switch_player.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Rambi\rambi_attack.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Rambi\rambi_crate_open.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sound\Rambi\rambi_jump.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Content\Background\gameOver.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Font\hudFont.spritefont" />
+    <Content Include="Content\Font\hudFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

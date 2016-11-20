@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="banana_bunch" color="#a49c14">
+  <property name="gid" type="string" default="3"/>
+  <property name="height" type="string" default="19"/>
+  <property name="width" type="string" default="23"/>
+ </objecttype>
+ <objecttype name="banana_single" color="#a0a0a4">
+  <property name="gid" type="string" default="11"/>
+  <property name="height" type="string" default="16"/>
+  <property name="width" type="string" default="12"/>
+ </objecttype>
+ <objecttype name="balloon_life" color="#a0a0a4">
+  <property name="gid" type="string" default="16"/>
+  <property name="height" type="string" default="58"/>
+  <property name="width" type="string" default="23"/>
+ </objecttype>
+ <objecttype name="barrel_check" color="#a0a0a4">
+  <property name="gid" type="string" default="23"/>
+  <property name="height" type="string" default="38"/>
+  <property name="width" type="string" default="29"/>
+ </objecttype>
+ <objecttype name="barrel_dk" color="#a0a0a4">
+  <property name="gid" type="string" default="32"/>
+  <property name="height" type="string" default="39"/>
+  <property name="width" type="string" default="30"/>
+ </objecttype>
+ <objecttype name="barrel_reg" color="#a0a0a4">
+  <property name="gid" type="string" default="42"/>
+  <property name="height" type="string" default="39"/>
+  <property name="width" type="string" default="30"/>
+ </objecttype>
+ <objecttype name="crate_rambi" color="#a0a0a4">
+  <property name="gid" type="string" default="43"/>
+  <property name="height" type="string" default="40"/>
+  <property name="width" type="string" default="94"/>
+ </objecttype>
+ <objecttype name="token_ost" color="#a0a0a4">
+  <property name="gid" type="string" default="46"/>
+  <property name="height" type="string" default="15"/>
+  <property name="width" type="string" default="15"/>
+ </objecttype>
+ <objecttype name="token_k" color="#a0a0a4">
+  <property name="gid" type="string" default="64"/>
+  <property name="height" type="string" default="16"/>
+  <property name="width" type="string" default="18"/>
+ </objecttype>
+ <objecttype name="enemy_gnawty" color="#a0a0a4">
+  <property name="gid" type="string" default="80"/>
+  <property name="height" type="string" default="31"/>
+  <property name="width" type="string" default="38"/>
+ </objecttype>
+ <objecttype name="enemy_klump" color="#a0a0a4">
+  <property name="gid" type="string" default="88"/>
+  <property name="height" type="string" default="64"/>
+  <property name="width" type="string" default="50"/>
+ </objecttype>
+ <objecttype name="enemy_kritter" color="#a0a0a4">
+  <property name="gid" type="string" default="96"/>
+  <property name="height" type="string" default="42"/>
+  <property name="width" type="string" default="51"/>
+ </objecttype>
+ <objecttype name="enemy_necky" color="#a0a0a4">
+  <property name="gid" type="string" default="104"/>
+  <property name="height" type="string" default="45"/>
+  <property name="width" type="string" default="61"/>
+ </objecttype>
+ <objecttype name="teleporter" color="#a0a0a4">
+  <property name="destination" type="string"/>
+  <property name="gid" type="int" default="23"/>
+ </objecttype>
+</objecttypes>

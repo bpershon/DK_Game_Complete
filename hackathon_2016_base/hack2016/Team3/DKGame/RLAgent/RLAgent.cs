@@ -74,10 +74,22 @@ namespace DKGame
         {
             get { return dead; }
         }
+
+        public const float TERMINAL_POS = 1;
+        public const float TERMINAL_NEG = -1;
+        public const float NON_TERMINAL = -0.4f;
+
         private float reward;
         public float Reward
         {
             get { return reward; }
+        }
+
+        private int timesSeen = 1;
+        public int TimesSeen
+        {
+            get { return timesSeen; }
+            set { timesSeen = value; }
         }
 
         // Public constructors
@@ -86,7 +98,7 @@ namespace DKGame
                         bool[] v_vec, 
                         bool[] enemy_dists, 
                         bool stuck_bit,
-                        bool dead_bit,
+                        bool dead_bit, 
                         float rwd)
         {
             init(d_pad_state, action_state, v_vec, enemy_dists,
@@ -97,8 +109,7 @@ namespace DKGame
         {
             init(qstate.ctrlInput, qstate.actions, 
                     qstate.velVector, qstate.enemies,
-                    qstate.stuck, qstate.dead,
-                    qstate.Reward);
+                    qstate.stuck, qstate.dead, qstate.reward);
         }
 
         void init(bool[] d_pad_state,
@@ -115,7 +126,7 @@ namespace DKGame
             enemies = enemy_dists;
             stuck = stuck_bit;
             dead = dead_bit;
-            reward = rwd;
+            rwd = reward;
         }
     }
 
@@ -135,7 +146,7 @@ namespace DKGame
         }
 
 
-        public void UpdateStates(Q_State nxtState)
+        public void UpdateState(Q_State nxtState)
         {
             if(nxtState == null)
             {
@@ -152,10 +163,10 @@ namespace DKGame
             {
                 visitedStates.Add(currState, 0);
             }
-            //update algorithm
+        }
 
-            visitedStates[currState] = (1 - learningRate) * visitedStates[currState] +
-                                            (learningRate * (currState.Reward + discountFact * MaxNxtAction()));
+        public void UpdatePolicy()
+        {
 
         }
 

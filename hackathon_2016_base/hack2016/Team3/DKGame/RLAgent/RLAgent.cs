@@ -11,20 +11,17 @@ namespace DKGame
         public enum dpad
         {
             Left = 0,
-            Right = 1
+            Right = 1,
+            Jump = 2,
+            Roll = 3
         };
 
-        // Left or Right d-pad pressed
-        private bool[] dPadInput;
-        public bool[] DPadInput
+        // 4 booleans accessed by dpad enums
+        private bool[] ctrlInput;
+        public bool[] CtrlInput
         {
-            get { return dPadInput; }
+            get { return ctrlInput; }
         }
-
-        public enum btn_act {
-            Jump = 0,
-            Roll = 1
-        };
         /* 
             Jump or Roll button pressed
                 only one can be pressed at a time
@@ -77,6 +74,11 @@ namespace DKGame
         {
             get { return dead; }
         }
+        private float reward;
+        public float Reward
+        {
+            get { return reward; }
+        }
 
         // Public constructors
         public Q_State (bool[] d_pad_state,
@@ -84,17 +86,19 @@ namespace DKGame
                         bool[] v_vec, 
                         bool[] enemy_dists, 
                         bool stuck_bit,
-                        bool dead_bit)
+                        bool dead_bit,
+                        float rwd)
         {
             init(d_pad_state, action_state, v_vec, enemy_dists,
-                    stuck_bit, dead_bit);
+                    stuck_bit, dead_bit, rwd);
         }
 
         public Q_State(Q_State qstate)
         {
-            init(qstate.dPadInput, qstate.actions, 
+            init(qstate.ctrlInput, qstate.actions, 
                     qstate.velVector, qstate.enemies,
-                    qstate.stuck, qstate.dead);
+                    qstate.stuck, qstate.dead,
+                    qstate.Reward);
         }
 
         void init(bool[] d_pad_state,
@@ -102,26 +106,67 @@ namespace DKGame
                   bool[] v_vec,
                   bool[] enemy_dists,
                   bool stuck_bit,
-                  bool dead_bit)
+                  bool dead_bit,
+                  float rwd)
         {
-            dPadInput = d_pad_state;
+            ctrlInput = d_pad_state;
             actions = action_state;
             velVector = v_vec;
             enemies = enemy_dists;
             stuck = stuck_bit;
             dead = dead_bit;
+            reward = rwd;
         }
     }
 
     class RLAgent
     {
-        Dictionary<Q_State, int> visited_states;
+        private Dictionary<Q_State, float> visitedStates;
+        private Q_State currState;
+        private float learningRate;
+        private float discountFact;
 
-        public RLAgent()
+        //Public constructor
+        public RLAgent(float learnRate, float discFact)
         {
-            visited_states = new Dictionary<Q_State, int>();
+            visitedStates = new Dictionary<Q_State, float>();
+            learningRate = learnRate;
+            discountFact = discFact;
         }
 
 
+        public void UpdateStates(Q_State nxtState)
+        {
+            if(nxtState == null)
+            {
+                return;
+            }
+
+            currState = nxtState;
+
+            if (visitedStates[currState] > 0)
+            {
+                // Update number of times nodes visited?
+            }
+            else
+            {
+                visitedStates.Add(currState, 0);
+            }
+            //update algorithm
+
+            visitedStates[currState] = (1 - learningRate) * visitedStates[currState] +
+                                            (learningRate * (currState.Reward + discountFact * MaxNxtAction()));
+
+        }
+
+        public Enum TakeAction()
+        {
+
+        }
+
+        public Q_State MaxNextAction()
+        {
+
+        }
     }
 }

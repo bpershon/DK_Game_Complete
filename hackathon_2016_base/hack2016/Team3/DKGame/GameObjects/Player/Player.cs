@@ -95,6 +95,7 @@ namespace DKGame
             state.Update();
             sprite.Update();
 			CollisionState = 0x00;
+            GetPercepts.getPlayerInfo(this);
         }
 
         public void Draw(SpriteBatch spriteBatch)

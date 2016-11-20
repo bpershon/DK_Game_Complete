@@ -8,14 +8,6 @@ namespace DKGame
 {
     public class Q_State{
 
-        public enum dpad
-        {
-            Left = 0,
-            Right = 1,
-            Jump = 2,
-            Roll = 3
-        };
-
         // 4 booleans accessed by dpad enums
         private bool[] ctrlInput;
         public bool[] CtrlInput
@@ -33,18 +25,6 @@ namespace DKGame
             get { return actions; }
         }
 
-        //used to access 8-way velocity vector
-        public enum vec_dir
-        {
-            Up = 0,
-            Up_Right = 1,
-            Right = 2,
-            Right_Down = 3,
-            Down = 4,
-            Down_Left = 5,
-            Left = 6,
-            Up_Left = 7
-        };
         // Usage vel_vector[ (int)vec_dir.[direction] ]
         private bool[] velVector;
         public bool[] VelVector
@@ -68,11 +48,13 @@ namespace DKGame
         public bool Stuck
         {
             get { return stuck; }
+            set { stuck = value; }
         }
         private bool dead;
         public bool Dead
         {
             get { return dead; }
+            set { dead = value; }
         }
 
         public const float TERMINAL_POS = 1;
@@ -103,6 +85,15 @@ namespace DKGame
         {
             init(d_pad_state, action_state, v_vec, enemy_dists,
                     stuck_bit, dead_bit, rwd);
+        }
+
+        public Q_State()
+        {
+            ctrlInput = new bool[4];
+            velVector = new bool[8];
+            enemies = new bool[4];
+            dead = false;
+            stuck = false;
         }
 
         public Q_State(Q_State qstate)

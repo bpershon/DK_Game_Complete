@@ -72,6 +72,8 @@
     <Compile Include="Physics\Collision\EnemyCollisionHandler.cs" />
     <Compile Include="Physics\Collision\EnemyCollisionHandlerLookupTable.cs" />
     <Compile Include="Physics\Collision\PlayerCollisionHandler.cs" />
+    <Compile Include="RLAgent\GetPercepts.cs" />
+    <Compile Include="RLAgent\RLAgent.cs" />
     <Compile Include="GameObjects\Blocks\IBlock.cs" />
     <Compile Include="GameObjects\Blocks\LevelBlock.cs" />
     <Compile Include="GameObjects\Enemy\Necky.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Physics\Collision\PlayerCollisionHandlerLookupTable.cs" />
     <Compile Include="Physics\Island.cs" />
     <Compile Include="Physics\PhysicsWorld.cs" />
+    <Compile Include="RLAgent\RLAgentUtilities.cs" />
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="Sound\SoundPool.cs" />
     <Compile Include="ScoreSystem\ScoreSystem.cs" />

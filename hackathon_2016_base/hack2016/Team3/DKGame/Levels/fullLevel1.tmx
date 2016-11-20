@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map height="1" nextobjectid="990" orientation="orthogonal" renderorder="right-down" tileheight="768" tilewidth="5376" version="1.0" width="1">
+ <tileset columns="1" firstgid="1" name="Tiles" tilecount="1" tileheight="10" tilewidth="50">
+  <image height="10" source="../Content/Background/levelBlock.png" width="50" />
+ </tileset>
+ <tileset columns="6" firstgid="2" name="banana_bunch" tilecount="6" tileheight="19" tilewidth="23">
+  <image height="19" source="../Content/Item/banana_bunch.png" width="138" />
+ </tileset>
+ <tileset columns="8" firstgid="8" name="banana_single" tilecount="8" tileheight="16" tilewidth="12">
+  <image height="16" source="../Content/Item/banana_single.png" width="96" />
+ </tileset>
+ <tileset columns="7" firstgid="16" name="balloon_life" tilecount="7" tileheight="58" tilewidth="23">
+  <image height="58" source="../Content/Item/balloon_life.png" width="161" />
+ </tileset>
+ <tileset columns="9" firstgid="23" name="barrel_check" tilecount="9" tileheight="38" tilewidth="29">
+  <image height="38" source="../Content/Item/barrel_check.png" width="261" />
+ </tileset>
+ <tileset columns="5" firstgid="32" name="barrel_dk" tilecount="5" tileheight="39" tilewidth="30">
+  <image height="39" source="../Content/Item/barrel_dk.png" width="150" />
+ </tileset>
+ <tileset columns="6" firstgid="37" name="barrel_reg" tilecount="6" tileheight="39" tilewidth="30">
+  <image height="39" source="../Content/Item/barrel_reg.png" width="180" />
+ </tileset>
+ <tileset columns="3" firstgid="43" name="crate_rambi" tilecount="3" tileheight="60" tilewidth="94">
+  <image height="60" source="../Content/Item/crate_rambi.png" width="282" />
+ </tileset>
+ <tileset columns="8" firstgid="46" name="token_ost" tilecount="8" tileheight="15" tilewidth="15">
+  <image height="15" source="../Content/Item/token_ost.png" width="120" />
+ </tileset>
+ <tileset columns="26" firstgid="54" name="token_letters" tilecount="26" tileheight="16" tilewidth="18">
+  <image height="16" source="../Content/Item/token_letters.png" width="468" />
+ </tileset>
+ <tileset columns="8" firstgid="80" name="enemy_gnawty" tilecount="8" tileheight="31" tilewidth="38">
+  <image height="31" source="../Content/Enemy/enemy_gnawty.png" width="304" />
+ </tileset>
+ <tileset columns="8" firstgid="88" name="enemy_klump" tilecount="8" tileheight="64" tilewidth="50">
+  <image height="64" source="../Content/Enemy/enemy_klump.png" width="400" />
+ </tileset>
+ <tileset columns="8" firstgid="96" name="enemy_kritter" tilecount="8" tileheight="42" tilewidth="51">
+  <image height="42" source="../Content/Enemy/enemy_kritter.png" width="408" />
+ </tileset>
+ <tileset columns="10" firstgid="104" name="enemy_necky" tilecount="10" tileheight="45" tilewidth="61">
+  <image height="45" source="../Content/Enemy/enemy_necky.png" width="610" />
+ </tileset>
+ <tileset columns="1" firstgid="114" name="sign_exit" tilecount="1" tileheight="38" tilewidth="32">
+  <image height="38" source="../Content/Item/sign_exit.png" width="32" />
+ </tileset>
+ <imagelayer name="Background">
+  <image height="768" source="../Content/Background/DKCMap.png" width="5376" />
+ </imagelayer>
+ <objectgroup name="Platforms">
+  <object gid="1" height="10" id="387" type="island" width="50" x="214.5" y="170" />
+  <object gid="1" height="10" id="388" type="island" width="50" x="315.5" y="155" />
+  <object gid="1" height="10" id="389" type="island" width="50" x="164.5" y="170" />
+  <object gid="1" height="10" id="413" type="level" width="50" x="37" y="240" />
+  <object gid="1" height="10" id="414" type="level" width="50" x="84" y="346" />
+  <object gid="1" height="10" id="415" type="level" width="50" x="38" y="250" />
+  <object gid="1" height="10" id="416" type="level" width="50" x="25" y="192" />
+  <object gid="1" height="10" id="417" type="level" width="50" x="22" y="183" />
+  <object gid="1" height="10" id="419" type="level" width="50" x="21" y="173" />
+  <object gid="1" height="10" id="420" type="level" width="50" x="134" y="346" />
+  <object gid="1" height="10" id="421" type="level" width="50" x="40" y="211" />
+  <object gid="1" height="10" id="422" type="level" width="50" x="16" y="153" />
+  <object gid="1" height="10" id="425" type="level" width="50" x="52" y="287" />
+  <object gid="1" height="10" id="426" type="level" width="50" x="41" y="260" />
+  <object gid="1" height="10" id="427" type="level" width="50" x="9" y="153" />
+  <object gid="1" height="10" id="429" type="level" width="50" x="44" y="269" />
+  <object gid="1" height="10" id="430" type="level" width="50" x="18" y="163" />
+  <object gid="1" height="10" id="431" type="level" width="50" x="35" y="230" />
+  <object gid="1" height="10" id="432" type="level" width="50" x="27" y="201" />
+  <object gid="1" height="10" id="434" type="level" width="50" x="35" y="220" />
+  <object gid="1" height="10" id="435" type="level" width="50" x="57" y="277" />
+  <object gid="1" height="10" id="436" type="island" width="50" x="554.5" y="179" />
+  <object gid="1" height="10" id="438" type="island" width="50" x="763.5" y="108" />
+  <object gid="1" height="10" id="439" type="island" width="50" x="698.5" y="160" />
+  <object gid="1" height="10" id="502" type="level" width="50" x="283" y="346" />
+  <object gid="1" height="10" id="503" type="level" width="50" x="184" y="346" />
+  <object gid="1" height="10" id="504" type="level" width="50" x="433" y="346" />
+  <object gid="1" height="10" id="505" type="level" width="50" x="533" y="350" />
+  <object gid="1" height="10" id="506" type="level" width="50" x="583" y="351" />
+  <object gid="1" height="10" id="507" type="level" width="50" x="383" y="346" />
+  <object gid="1" height="10" id="508" type="level" width="50" x="483" y="346" />
+  <object gid="1" height="10" id="509" type="level" width="50" x="333" y="346" />
+  <object gid="1" height="10" id="510" type="level" width="50" x="233" y="346" />
+  <object gid="1" height="10" id="511" type="level" width="50" x="929.5" y="362" />
+  <object gid="1" height="10" id="512" type="level" width="50" x="1076.5" y="362" />
+  <object gid="1" height="10" id="513" type="level" width="50" x="631.5" y="352" />
+  <object gid="1" height="10" id="514" type="level" width="50" x="680.5" y="356" />
+  <object gid="1" height="10" id="515" type="level" width="50" x="729.5" y="356" />
+  <object gid="1" height="10" id="516" type="level" width="50" x="1177.5" y="360" />
+  <object gid="1" height="10" id="517" type="level" width="50" x="1473.5" y="360" />
+  <object gid="1" height="10" id="518" type="level" width="50" x="779.5" y="361" />
+  <object gid="1" height="10" id="519" type="level" width="50" x="1327.5" y="360" />
+  <object gid="1" height="10" id="520" type="level" width="50" x="829.5" y="361" />
+  <object gid="1" height="10" id="521" type="level" width="50" x="1375.5" y="359" />
+  <object gid="1" height="10" id="522" type="level" width="50" x="1027.5" y="362" />
+  <object gid="1" height="10" id="523" type="level" width="50" x="1126.5" y="362" />
+  <object gid="1" height="10" id="524" type="level" width="50" x="879.5" y="362" />
+  <object gid="1" height="10" id="525" type="level" width="50" x="1227.5" y="360" />
+  <object gid="1" height="10" id="527" type="level" width="50" x="977.5" y="362" />
+  <object gid="1" height="10" id="528" type="level" width="50" x="1277.5" y="360" />
+  <object gid="1" height="10" id="535" type="island" width="50" x="810" y="266" />
+  <object gid="1" height="10" id="536" type="island" width="50" x="860" y="265" />
+  <object gid="1" height="10" id="537" type="island" width="50" x="958" y="262" />
+  <object gid="1" height="10" id="538" type="island" width="50" x="1056" y="265" />
+  <object gid="1" height="10" id="539" type="island" width="50" x="1007" y="264" />
+  <object gid="1" height="10" id="540" type="island" width="50" x="910" y="262" />
+  <object gid="1" height="10" id="541" type="island" width="50" x="1318" y="112" />
+  <object gid="1" height="10" id="542" type="island" width="50" x="1366" y="113" />
+  <object gid="1" height="10" id="543" type="island" width="50" x="1146" y="176" />
+  <object gid="1" height="10" id="544" type="island" width="50" x="970" y="113" />
+  <object gid="1" height="10" id="545" type="island" width="50" x="1227" y="157" />
+  <object gid="1" height="10" id="546" type="island" width="50" x="1020" y="114" />
+  <object gid="1" height="10" id="547" type="island" width="50" x="1346.5" y="271" />
+  <object gid="1" height="10" id="548" type="island" width="50" x="1503.5" y="269" />
+  <object gid="1" height="10" id="549" type="island" width="50" x="1296.5" y="271" />
+  <object gid="1" height="10" id="550" type="island" width="50" x="1454.5" y="269" />
+  <object gid="1" height="10" id="551" type="island" width="50" x="1756" y="152" />
+  <object gid="1" height="10" id="552" type="island" width="50" x="1632" y="172" />
+  <object gid="1" height="10" id="553" type="island" width="50" x="1998" y="142" />
+  <object gid="1" height="10" id="554" type="island" width="50" x="1681" y="172" />
+  <object gid="1" height="10" id="555" type="level" width="50" x="1424.5" y="359" />
+  <object gid="1" height="10" id="557" type="level" width="50" x="2027.5" y="336" />
+  <object gid="1" height="10" id="558" type="level" width="50" x="1767.5" y="334" />
+  <object gid="1" height="10" id="559" type="level" width="50" x="1669.5" y="344" />
+  <object gid="1" height="10" id="560" type="level" width="50" x="2038.5" y="345" />
+  <object gid="1" height="10" id="561" type="level" width="50" x="1522.5" y="356" />
+  <object gid="1" height="10" id="562" type="level" width="50" x="1621.5" y="350" />
+  <object gid="1" height="10" id="563" type="level" width="50" x="2042.5" y="354" />
+  <object gid="1" height="10" id="564" type="level" width="50" x="2051.5" y="382" />
+  <object gid="1" height="10" id="565" type="level" width="50" x="1718.5" y="338" />
+  <object gid="1" height="10" id="566" type="level" width="50" x="2047.5" y="372" />
+  <object gid="1" height="10" id="567" type="level" width="50" x="1571.5" y="355" />
+  <object gid="1" height="10" id="568" type="level" width="50" x="2044.5" y="363" />
+  <object gid="1" height="10" id="569" type="level" width="50" x="2016.5" y="326" />
+  <object gid="1" height="10" id="570" type="level" width="50" x="1867" y="322.5" />
+  <object gid="1" height="10" id="571" type="level" width="50" x="1817" y="328.5" />
+  <object gid="1" height="10" id="572" type="level" width="50" x="1917" y="318.5" />
+  <object gid="1" height="10" id="573" type="level" width="50" x="1967" y="321.5" />
+  <object gid="1" height="10" id="574" type="island" width="50" x="2412" y="346" />
+  <object gid="1" height="10" id="575" type="level" width="50" x="2061" y="409" />
+  <object gid="1" height="10" id="576" type="island" width="50" x="2462" y="352" />
+  <object gid="1" height="10" id="577" type="level" width="50" x="2407" y="440" />
+  <object gid="1" height="10" id="578" type="island" width="50" x="2294" y="214" />
+  <object gid="1" height="10" id="579" type="level" width="50" x="2158" y="413" />
+  <object gid="1" height="10" id="580" type="level" width="50" x="2062" y="400" />
+  <object gid="1" height="10" id="581" type="level" width="50" x="2256" y="424" />
+  <object gid="1" height="10" id="582" type="level" width="50" x="2062" y="390" />
+  <object gid="1" height="10" id="585" type="island" width="50" x="2360" y="164" />
+  <object gid="1" height="10" id="586" type="level" width="50" x="2357" y="434" />
+  <object gid="1" height="10" id="587" type="level" width="50" x="2207" y="419" />
+  <object gid="1" height="10" id="588" type="level" width="50" x="2111" y="408" />
+  <object gid="1" height="10" id="589" type="level" width="50" x="2307" y="429" />
+  <object gid="1" height="10" id="590" type="level" width="50" x="2751.5" y="430.5" />
+  <object gid="1" height="10" id="591" type="island" width="50" x="2611.5" y="351.5" />
+  <object gid="1" height="10" id="592" type="level" width="50" x="2653.5" y="439.5" />
+  <object gid="1" height="10" id="593" type="level" width="50" x="2948.5" y="407.5" />
+  <object gid="1" height="10" id="594" type="island" width="50" x="2507.5" y="263.5" />
+  <object gid="1" height="10" id="595" type="level" width="50" x="2898.5" y="413.5" />
+  <object gid="1" height="10" id="596" type="level" width="50" x="2604.5" y="445.5" />
+  <object gid="1" height="10" id="597" type="level" width="50" x="2505.5" y="450.5" />
+  <object gid="1" height="10" id="598" type="level" width="50" x="2799.5" y="425.5" />
+  <object gid="1" height="10" id="599" type="island" width="50" x="2658.5" y="346.5" />
+  <object gid="1" height="10" id="600" type="island" width="50" x="2557.5" y="263.5" />
+  <object gid="1" height="10" id="601" type="level" width="50" x="2554.5" y="450.5" />
+  <object gid="1" height="10" id="602" type="island" width="50" x="2561.5" y="354.5" />
+  <object gid="1" height="10" id="603" type="level" width="50" x="2849.5" y="418.5" />
+  <object gid="1" height="10" id="604" type="island" width="50" x="2511.5" y="354.5" />
+  <object gid="1" height="10" id="605" type="level" width="50" x="2456.5" y="443.5" />
+  <object gid="1" height="10" id="606" type="level" width="50" x="2703.5" y="437.5" />
+  <object gid="1" height="10" id="607" type="island" width="50" x="2745.17" y="246.5" />
+  <object gid="1" height="10" id="608" type="island" width="50" x="3048.17" y="200.5" />
+  <object gid="1" height="10" id="609" type="island" width="50" x="3282.17" y="183.5" />
+  <object gid="1" height="10" id="610" type="island" width="50" x="3629" y="136.5" />
+  <object gid="1" height="10" id="611" type="level" width="50" x="3548" y="406.5" />
+  <object gid="1" height="10" id="612" type="level" width="50" x="3246" y="380.5" />
+  <object gid="1" height="10" id="613" type="level" width="50" x="3525" y="415.5" />
+  <object gid="1" height="10" id="614" type="level" width="50" x="3345" y="375.5" />
+  <object gid="1" height="10" id="615" type="level" width="50" x="3551" y="369.5" />
+  <object gid="1" height="10" id="616" type="level" width="50" x="3566" y="349.5" />
+  <object gid="1" height="10" id="617" type="island" width="50" x="3412" y="215.5" />
+  <object gid="1" height="10" id="618" type="level" width="50" x="3548" y="387.5" />
+  <object gid="1" height="10" id="619" type="level" width="50" x="3427" y="415.5" />
+  <object gid="1" height="10" id="620" type="level" width="50" x="3476" y="415.5" />
+  <object gid="1" height="10" id="621" type="level" width="50" x="3547" y="396.5" />
+  <object gid="1" height="10" id="622" type="level" width="50" x="3664" y="338.5" />
+  <object gid="1" height="10" id="623" type="level" width="50" x="3295" y="375.5" />
+  <object gid="1" height="10" id="624" type="level" width="50" x="3615" y="343.5" />
+  <object gid="1" height="10" id="625" type="level" width="50" x="3553" y="359.5" />
+  <object gid="1" height="10" id="626" type="level" width="50" x="3549" y="378.5" />
+  <object gid="1" height="10" id="630" type="level" width="50" x="3147" y="391" />
+  <object gid="1" height="10" id="631" type="level" width="50" x="3197" y="385" />
+  <object gid="1" height="10" id="632" type="level" width="50" x="3097" y="396" />
+  <object gid="1" height="10" id="634" type="level" width="50" x="3047" y="404" />
+  <object gid="1" height="10" id="635" type="level" width="50" x="2999" y="407" />
+  <object gid="1" height="10" id="636" type="level" width="50" x="3714" y="335" />
+  <object gid="1" height="10" id="637" type="level" width="50" x="4079" y="302" />
+  <object gid="1" height="10" id="638" type="island" width="50" x="4236" y="295" />
+  <object gid="1" height="10" id="639" type="level" width="50" x="3809" y="297" />
+  <object gid="1" height="10" id="640" type="level" width="50" x="4096" y="350" />
+  <object gid="1" height="10" id="641" type="level" width="50" x="3765" y="306" />
+  <object gid="1" height="10" id="642" type="level" width="50" x="4089" y="331" />
+  <object gid="1" height="10" id="643" type="level" width="50" x="3715" y="307" />
+  <object gid="1" height="10" id="644" type="level" width="50" x="4099" y="369" />
+  <object gid="1" height="10" id="645" type="level" width="50" x="3715" y="316" />
+  <object gid="1" height="10" id="646" type="level" width="50" x="3715" y="326" />
+  <object gid="1" height="10" id="647" type="island" width="50" x="4189" y="295" />
+  <object gid="1" height="10" id="648" type="level" width="50" x="4087" y="322" />
+  <object gid="1" height="10" id="649" type="level" width="50" x="4097" y="359" />
+  <object gid="1" height="10" id="650" type="level" width="50" x="4107" y="341" />
+  <object gid="1" height="10" id="651" type="level" width="50" x="4082" y="312" />
+  <object gid="1" height="10" id="687" type="level" width="50" x="4291" y="448.5" />
+  <object gid="1" height="10" id="688" type="level" width="50" x="4262" y="477.5" />
+  <object gid="1" height="10" id="689" type="level" width="50" x="3965" y="235.5" />
+  <object gid="1" height="10" id="690" type="level" width="50" x="4291" y="458.5" />
+  <object gid="1" height="10" id="691" type="level" width="50" x="4314" y="420.5" />
+  <object gid="1" height="10" id="692" type="level" width="50" x="4110" y="417.5" />
+  <object gid="1" height="10" id="693" type="level" width="50" x="4116" y="437.5" />
+  <object gid="1" height="10" id="695" type="level" width="50" x="3915" y="239.5" />
+  <object gid="1" height="10" id="696" type="level" width="50" x="4100" y="378.5" />
+  <object gid="1" height="10" id="697" type="level" width="50" x="4061" y="231.5" />
+  <object gid="1" height="10" id="698" type="level" width="50" x="4075" y="291.5" />
+  <object gid="1" height="10" id="699" type="level" width="50" x="4433" y="430.5" />
+  <object gid="1" height="10" id="700" type="level" width="50" x="4124" y="456.5" />
+  <object gid="1" height="10" id="701" type="level" width="50" x="4112" y="427.5" />
+  <object gid="1" height="10" id="702" type="level" width="50" x="4104" y="397.5" />
+  <object gid="1" height="10" id="703" type="level" width="50" x="4164" y="476.5" />
+  <object gid="1" height="10" id="704" type="level" width="50" x="4073" y="281.5" />
+  <object gid="1" height="10" id="705" type="level" width="50" x="4213" y="476.5" />
+  <object gid="1" height="10" id="706" type="level" width="50" x="4291" y="440.5" />
+  <object gid="1" height="10" id="707" type="level" width="50" x="4291" y="430.5" />
+  <object gid="1" height="10" id="708" type="level" width="50" x="4290" y="467.5" />
+  <object gid="1" height="10" id="709" type="level" width="50" x="4065" y="251.5" />
+  <object gid="1" height="10" id="710" type="level" width="50" x="4364" y="420.5" />
+  <object gid="1" height="10" id="711" type="level" width="50" x="4120" y="447.5" />
+  <object gid="1" height="10" id="712" type="island" width="50" x="4449" y="233.5" />
+  <object gid="1" height="10" id="713" type="level" width="50" x="4383" y="430.5" />
+  <object gid="1" height="10" id="715" type="level" width="50" x="4118" y="407.5" />
+  <object gid="1" height="10" id="716" type="level" width="50" x="4071" y="271.5" />
+  <object gid="1" height="10" id="717" type="level" width="50" x="4126" y="466.5" />
+  <object gid="1" height="10" id="718" type="level" width="50" x="4068" y="261.5" />
+  <object gid="1" height="10" id="719" type="level" width="50" x="4102" y="387.5" />
+  <object gid="1" height="10" id="720" type="level" width="50" x="4063" y="241.5" />
+  <object gid="1" height="10" id="721" type="level" width="50" x="4015" y="230.5" />
+  <object gid="1" height="10" id="722" type="level" width="50" x="3904" y="249.5" />
+  <object gid="1" height="10" id="723" type="level" width="50" x="3904" y="268.5" />
+  <object gid="1" height="10" id="724" type="level" width="50" x="3858" y="278.5" />
+  <object gid="1" height="10" id="725" type="level" width="50" x="3904" y="258.5" />
+  <object gid="1" height="10" id="726" type="level" width="50" x="3809" y="277" />
+  <object gid="1" height="10" id="727" type="level" width="50" x="3809" y="287" />
+  <object gid="1" height="10" id="728" type="level" width="50" x="4974.5" y="413" />
+  <object gid="1" height="10" id="729" type="island" width="50" x="4842.5" y="232" />
+  <object gid="1" height="10" id="730" type="level" width="50" x="5072.5" y="413" />
+  <object gid="1" height="10" id="731" type="level" width="50" x="5303.5" y="468" />
+  <object gid="1" height="10" id="732" type="level" width="50" x="5095.5" y="439" />
+  <object gid="1" height="10" id="733" type="level" width="50" x="4677.5" y="412" />
+  <object gid="1" height="10" id="734" type="level" width="50" x="5153.5" y="468" />
+  <object gid="1" height="10" id="735" type="island" width="50" x="5027.5" y="234" />
+  <object gid="1" height="10" id="736" type="level" width="50" x="5098.5" y="449" />
+  <object gid="1" height="10" id="737" type="island" width="50" x="4691.5" y="216" />
+  <object gid="1" height="10" id="738" type="level" width="50" x="4924.5" y="413" />
+  <object gid="1" height="10" id="740" type="level" width="50" x="5253.5" y="468" />
+  <object gid="1" height="10" id="741" type="level" width="50" x="5101.5" y="458" />
+  <object gid="1" height="10" id="742" type="level" width="50" x="5090.5" y="430" />
+  <object gid="1" height="10" id="743" type="level" width="50" x="4776.5" y="413" />
+  <object gid="1" height="10" id="744" type="level" width="50" x="4875.5" y="413" />
+  <object gid="1" height="10" id="745" type="level" width="50" x="5203.5" y="468" />
+  <object gid="1" height="10" id="746" type="level" width="50" x="4825.5" y="413" />
+  <object gid="1" height="10" id="747" type="island" width="50" x="4792.5" y="232" />
+  <object gid="1" height="10" id="748" type="level" width="50" x="4627.5" y="412" />
+  <object gid="1" height="10" id="749" type="level" width="50" x="5104.5" y="468" />
+  <object gid="1" height="10" id="750" type="island" width="50" x="5077.5" y="234" />
+  <object gid="1" height="10" id="751" type="level" width="50" x="5022.5" y="413" />
+  <object gid="1" height="10" id="752" type="island" width="50" x="5176.5" y="313" />
+  <object gid="1" height="10" id="753" type="level" width="50" x="5089.5" y="423" />
+  <object gid="1" height="10" id="757" type="level" width="50" x="4482.5" y="425.5" />
+  <object gid="1" height="10" id="758" type="level" width="50" x="4531.5" y="420.5" />
+  <object gid="1" height="10" id="759" type="level" width="50" x="4579.5" y="415.5" />
+  <object gid="1" height="10" id="772" type="level" width="50" x="182" y="677" />
+  <object gid="1" height="10" id="773" type="level" width="50" x="175" y="686" />
+  <object gid="1" height="10" id="774" type="level" width="50" x="193" y="670" />
+  <object gid="1" height="10" id="775" type="level" width="50" x="164" y="694" />
+  <object gid="1" height="10" id="776" type="level" width="50" x="148" y="701" />
+  <object gid="1" height="10" id="777" type="level" width="50" x="106" y="704" />
+  <object gid="1" height="10" id="778" type="level" width="50" x="59" y="704" />
+  <object gid="1" height="10" id="779" type="level" width="50" x="-18" y="704" />
+  <object gid="1" height="10" id="780" type="level" width="50" x="21" y="704" />
+  <object gid="1" height="198" id="784" type="level" width="12" x="257.5" y="715" />
+  <object gid="1" height="10" id="786" type="level" width="50" x="260" y="714" />
+  <object gid="1" height="10" id="787" type="level" width="50" x="259.996" y="724.072" />
+  <object gid="1" height="10" id="788" type="level" width="50" x="260" y="696" />
+  <object gid="1" height="10" id="791" type="level" width="50" x="260" y="678" />
+  <object gid="1" height="10" id="792" type="level" width="50" x="260" y="686" />
+  <object gid="1" height="10" id="793" type="level" width="50" x="260" y="668" />
+  <object gid="1" height="10" id="794" type="level" width="50" x="259.735" y="612.924" />
+  <object gid="1" height="10" id="795" type="level" width="50" x="259.735" y="650.924" />
+  <object gid="1" height="10" id="796" type="level" width="50" x="259.735" y="658.924" />
+  <object gid="1" height="10" id="797" type="level" width="50" x="259.735" y="630.924" />
+  <object gid="1" height="10" id="798" type="level" width="50" x="259.735" y="622.924" />
+  <object gid="1" height="10" id="799" type="level" width="50" x="259.735" y="640.924" />
+  <object gid="1" height="10" id="800" type="level" width="50" x="259.004" y="541.723" />
+  <object gid="1" height="10" id="802" type="level" width="50" x="259.269" y="568.799" />
+  <object gid="1" height="10" id="803" type="level" width="50" x="259.004" y="551.723" />
+  <object gid="1" height="10" id="804" type="level" width="50" x="259.004" y="531.723" />
+  <object gid="1" height="10" id="805" type="level" width="50" x="259.004" y="523.723" />
+  <object gid="1" height="10" id="806" type="level" width="50" x="259.269" y="606.799" />
+  <object gid="1" height="10" id="807" type="level" width="50" x="259.269" y="586.799" />
+  <object gid="1" height="10" id="808" type="level" width="50" x="259.269" y="578.799" />
+  <object gid="1" height="10" id="809" type="level" width="50" x="259.004" y="559.723" />
+  <object gid="1" height="10" id="810" type="level" width="50" x="259.269" y="596.799" />
+  <object gid="1" height="10" id="811" type="level" width="50" x="260.157" y="703.835" />
+  <object gid="1" height="10" id="812" type="level" width="50" x="309.337" y="723.916" />
+  <object gid="1" height="10" id="813" type="level" width="50" x="358.534" y="723.912" />
+  <object gid="1" height="10" id="814" type="level" width="50" x="405.723" y="723.916" />
+  <object gid="1" height="10" id="815" type="level" width="50" x="455.924" y="723.916" />
+  <object gid="1" height="10" id="816" type="level" width="50" x="491.064" y="723.916" />
+  <object gid="1" height="10" id="817" type="level" width="50" x="517.861" y="587.53" />
+  <object gid="1" height="10" id="818" type="level" width="50" x="518.327" y="621.655" />
+  <object gid="1" height="10" id="819" type="level" width="50" x="517.596" y="550.454" />
+  <object gid="1" height="10" id="820" type="level" width="50" x="517.596" y="560.454" />
+  <object gid="1" height="10" id="821" type="level" width="50" x="518.327" y="649.655" />
+  <object gid="1" height="10" id="822" type="level" width="50" x="518.592" y="694.731" />
+  <object gid="1" height="10" id="823" type="level" width="50" x="518.327" y="639.655" />
+  <object gid="1" height="10" id="824" type="level" width="50" x="517.861" y="615.53" />
+  <object gid="1" height="10" id="825" type="level" width="50" x="518.327" y="659.655" />
+  <object gid="1" height="10" id="826" type="level" width="50" x="517.861" y="577.53" />
+  <object gid="1" height="10" id="827" type="level" width="50" x="518.327" y="631.655" />
+  <object gid="1" height="10" id="828" type="level" width="50" x="517.596" y="568.454" />
+  <object gid="1" height="10" id="829" type="level" width="50" x="517.861" y="605.53" />
+  <object gid="1" height="10" id="830" type="level" width="50" x="517.861" y="595.53" />
+  <object gid="1" height="10" id="831" type="level" width="50" x="518.749" y="712.566" />
+  <object gid="1" height="10" id="832" type="level" width="50" x="518.327" y="667.655" />
+  <object gid="1" height="10" id="833" type="level" width="50" x="518.592" y="686.731" />
+  <object gid="1" height="10" id="834" type="level" width="50" x="517.596" y="540.454" />
+  <object gid="1" height="10" id="835" type="level" width="50" x="518.592" y="676.731" />
+  <object gid="1" height="10" id="836" type="level" width="50" x="518.592" y="704.731" />
+  <object gid="1" height="10" id="837" type="level" width="50" x="517.596" y="532.454" />
+  <object gid="1" height="10" id="838" type="level" width="50" x="518.173" y="523.112" />
+  <object gid="1" height="10" id="844" type="level" width="50" x="3239.06" y="690.783" />
+  <object gid="1" height="10" id="845" type="level" width="50" x="3203.92" y="690.783" />
+  <object gid="1" height="10" id="846" type="level" width="50" x="3190.86" y="682.751" />
+  <object gid="1" height="10" id="847" type="level" width="50" x="3203.92" y="646.606" />
+  <object gid="1" height="10" id="848" type="level" width="50" x="3196.88" y="677.731" />
+  <object gid="1" height="10" id="849" type="level" width="50" x="3196.89" y="667.691" />
+  <object gid="1" height="10" id="850" type="level" width="50" x="3202.91" y="665.683" />
+  <object gid="1" height="10" id="851" type="level" width="50" x="3196.88" y="680.743" />
+  <object gid="1" height="10" id="852" type="level" width="50" x="3202.91" y="656.647" />
+  <object gid="1" height="10" id="853" type="level" width="50" x="3202.9" y="675.723" />
+  <object gid="1" height="10" id="854" type="level" width="50" x="3203.92" y="638.574" />
+  <object gid="1" height="10" id="855" type="level" width="50" x="3206.93" y="629.538" />
+  <object gid="1" height="10" id="856" type="level" width="50" x="3207.93" y="620.486" />
+  <object gid="1" height="10" id="857" type="level" width="50" x="3206.93" y="610.337" />
+  <object gid="1" height="10" id="858" type="level" width="50" x="3206.93" y="600.337" />
+  <object gid="1" height="10" id="859" type="level" width="50" x="3206.93" y="590.209" />
+  <object gid="1" height="10" id="860" type="level" width="50" x="3206.93" y="580.209" />
+  <object gid="1" height="10" id="861" type="level" width="50" x="3206.93" y="570.209" />
+  <object gid="1" height="10" id="862" type="level" width="50" x="3206.93" y="560.209" />
+  <object gid="1" height="10" id="863" type="level" width="50" x="3206.93" y="550.209" />
+  <object gid="1" height="10" id="864" type="level" width="50" x="3206.93" y="548.209" />
+  <object gid="1" height="10" id="865" type="level" width="50" x="3206.93" y="540.209" />
+  <object gid="1" height="10" id="866" type="level" width="50" x="3206.93" y="532.209" />
+  <object gid="1" height="10" id="867" type="level" width="50" x="3206.93" y="523.209" />
+  <object gid="1" height="10" id="868" type="level" width="50" x="3273.19" y="697.811" />
+  <object gid="1" height="10" id="869" type="level" width="50" x="3316.37" y="699.819" />
+  <object gid="1" height="10" id="870" type="level" width="50" x="3352.51" y="701.827" />
+  <object gid="1" height="10" id="871" type="level" width="50" x="3371.59" y="708.855" />
+  <object gid="1" height="10" id="872" type="level" width="50" x="3394.68" y="717.892" />
+  <object gid="1" height="10" id="873" type="level" width="50" x="3435.84" y="723.916" />
+  <object gid="1" height="10" id="874" type="level" width="50" x="3485.04" y="723.912" />
+  <object gid="1" height="10" id="875" type="level" width="50" x="3530.22" y="723.908" />
+  <object gid="1" height="10" id="876" type="level" width="50" x="3580.42" y="723.916" />
+  <object gid="1" height="10" id="877" type="level" width="50" x="3629.62" y="719.9" />
+  <object gid="1" height="10" id="878" type="level" width="50" x="3655.72" y="711.867" />
+  <object gid="1" height="10" id="879" type="level" width="50" x="3681.83" y="702.827" />
+  <object gid="1" height="10" id="880" type="level" width="50" x="3711.95" y="695.803" />
+  <object gid="1" height="10" id="881" type="level" width="50" x="3762.15" y="694.799" />
+  <object gid="1" height="10" id="882" type="level" width="50" x="3810.34" y="693.795" />
+  <object gid="1" height="10" id="883" type="level" width="50" x="3860.54" y="692.791" />
+  <object gid="1" height="10" id="884" type="level" width="50" x="3909.74" y="692.791" />
+  <object gid="1" height="10" id="885" type="level" width="50" x="3951.41" y="693.795" />
+  <object gid="1" height="10" id="886" type="level" width="50" x="3999.6" y="692.791" />
+  <object gid="1" height="10" id="887" type="level" width="50" x="4049.8" y="691.787" />
+  <object gid="1" height="10" id="888" type="level" width="50" x="4099" y="691.787" />
+  <object gid="1" height="10" id="889" type="level" width="50" x="4145.68" y="690.783" />
+  <object gid="1" height="10" id="890" type="level" width="50" x="4188.86" y="690.783" />
+  <object gid="1" height="10" id="891" type="level" width="50" x="4203.42" y="577.189" />
+  <object gid="1" height="10" id="892" type="level" width="50" x="4193.38" y="674.671" />
+  <object gid="1" height="10" id="893" type="level" width="50" x="4203.42" y="607.317" />
+  <object gid="1" height="10" id="894" type="level" width="50" x="4199.4" y="663.627" />
+  <object gid="1" height="10" id="895" type="level" width="50" x="4203.42" y="557.189" />
+  <object gid="1" height="10" id="896" type="level" width="50" x="4203.42" y="555.189" />
+  <object gid="1" height="10" id="897" type="level" width="50" x="4199.4" y="672.663" />
+  <object gid="1" height="10" id="898" type="level" width="50" x="4203.42" y="587.189" />
+  <object gid="1" height="10" id="899" type="level" width="50" x="4203.42" y="617.317" />
+  <object gid="1" height="10" id="900" type="level" width="50" x="4203.42" y="567.189" />
+  <object gid="1" height="10" id="901" type="level" width="50" x="4203.42" y="597.189" />
+  <object gid="1" height="10" id="902" type="level" width="50" x="4203.42" y="547.189" />
+  <object gid="1" height="10" id="903" type="level" width="50" x="4200.41" y="653.586" />
+  <object gid="1" height="10" id="904" type="level" width="50" x="4193.37" y="684.711" />
+  <object gid="1" height="10" id="905" type="level" width="50" x="4203.42" y="539.189" />
+  <object gid="1" height="10" id="906" type="level" width="50" x="4203.42" y="530.189" />
+  <object gid="1" height="10" id="907" type="level" width="50" x="4199.39" y="682.703" />
+  <object gid="1" height="10" id="908" type="level" width="50" x="4204.42" y="627.466" />
+  <object gid="1" height="10" id="909" type="level" width="50" x="4200.41" y="645.554" />
+  <object gid="1" height="10" id="910" type="level" width="50" x="4203.42" y="636.518" />
+ </objectgroup>
+ <objectgroup name="ItemLayer">
+  <object gid="3" height="19" id="440" type="banana_bunch" width="23" x="776.5" y="90.5" />
+  <object gid="8" height="16" id="441" type="banana_single" width="12" x="487" y="140.5" />
+  <object gid="8" height="16" id="442" type="banana_single" width="12" x="486" y="84.5" />
+  <object gid="8" height="16" id="443" type="banana_single" width="12" x="487" y="163.5" />
+  <object gid="8" height="16" id="444" type="banana_single" width="12" x="487" y="183.5" />
+  <object gid="8" height="16" id="445" type="banana_single" width="12" x="486" y="113.5" />
+  <object gid="8" height="16" id="446" type="banana_single" width="12" x="465" y="165.5" />
+  <object gid="8" height="16" id="447" type="banana_single" width="12" x="523" y="142.5" />
+  <object gid="8" height="16" id="448" type="banana_single" width="12" x="508" y="164.5" />
+  <object gid="8" height="16" id="449" type="banana_single" width="12" x="451" y="142.5" />
+  <object gid="8" height="16" id="453" type="banana_single" width="12" x="363" y="330" />
+  <object gid="8" height="16" id="454" type="banana_single" width="12" x="331" y="330" />
+  <object gid="8" height="16" id="455" type="banana_single" width="12" x="295" y="330" />
+  <object gid="33" height="39" id="456" type="barrel_dk" width="30" x="606" y="335.5" />
+  <object gid="8" height="16" id="457" type="banana_single" width="12" x="866.5" y="253.5" />
+  <object gid="8" height="16" id="458" type="banana_single" width="12" x="842.5" y="253.5" />
+  <object gid="64" height="16" id="459" type="token_k" width="18" x="955.5" y="186.5" />
+  <object gid="8" height="16" id="460" type="banana_single" width="12" x="1071" y="248.5" />
+  <object gid="8" height="16" id="461" type="banana_single" width="12" x="1091" y="249.5" />
+  <object gid="8" height="16" id="462" type="banana_single" width="12" x="1304.5" y="256" />
+  <object gid="8" height="16" id="463" type="banana_single" width="12" x="1327.5" y="256" />
+  <object gid="3" height="19" id="464" type="banana_bunch" width="23" x="1412.5" y="210.5" />
+  <object gid="19" height="58" id="465" type="balloon_life" width="23" x="1668.5" y="122" />
+  <object gid="8" height="16" id="466" type="banana_single" width="12" x="1488" y="256" />
+  <object gid="8" height="16" id="467" type="banana_single" width="12" x="1466" y="256" />
+  <object gid="8" height="16" id="468" type="banana_single" width="12" x="1512" y="255" />
+  <object gid="19" height="58" id="469" type="balloon_life" width="23" x="2004.5" y="92" />
+  <object gid="33" height="39" id="470" type="barrel_dk" width="30" x="2127.5" y="384" />
+  <object gid="68" height="16" id="471" type="token_o" width="18" x="2171.5" y="215" />
+  <object gid="25" height="38" id="472" type="barrel_check" width="29" x="2056.5" y="313" />
+  <object gid="8" height="16" id="473" type="banana_single" width="12" x="2588" y="336" />
+  <object gid="8" height="16" id="474" type="banana_single" width="12" x="2504" y="336" />
+  <object gid="8" height="16" id="475" type="banana_single" width="12" x="2430" y="323" />
+  <object gid="8" height="16" id="476" type="banana_single" width="12" x="2464" y="334" />
+  <object gid="46" height="15" id="477" type="token_ost" width="15" x="2547" y="334" />
+  <object gid="8" height="16" id="478" type="banana_single" width="12" x="2631" y="333" />
+  <object gid="8" height="16" id="479" type="banana_single" width="12" x="2669" y="324" />
+  <object gid="37" height="39" id="480" type="barrel_reg" width="30" x="2417" y="423.5" />
+  <object gid="8" height="16" id="482" type="banana_single" width="12" x="3633.5" y="326.5" />
+  <object gid="67" height="16" id="483" type="token_n" width="18" x="3343.5" y="340.5" />
+  <object gid="8" height="16" id="484" type="banana_single" width="12" x="3597.5" y="338.5" />
+  <object gid="8" height="16" id="485" type="banana_single" width="12" x="3676.5" y="323.5" />
+  <object gid="8" height="16" id="486" type="banana_single" width="12" x="4077.5" y="201.5" />
+  <object gid="8" height="16" id="487" type="banana_single" width="12" x="4006.5" y="210.5" />
+  <object gid="8" height="16" id="488" type="banana_single" width="12" x="4042.5" y="205.5" />
+  <object gid="60" height="16" id="489" type="token_g" width="18" x="4226" y="234" />
+  <object gid="3" height="19" id="491" type="banana_bunch" width="23" x="5061" y="205" />
+  <object gid="3" height="19" id="493" type="banana_bunch" width="23" x="4738" y="339" />
+  <object gid="43" height="60" id="760" type="crate_rambi" width="94" x="2955" y="396" />
+  <object gid="114" height="38" id="761" type="sign_exit" width="32" x="5195" y="458" />
+  <object gid="19" height="58" id="763" type="balloon_life" width="23" x="630" y="144" />
+  <object gid="26" height="38" id="764" type="barrel_check" width="29" x="873" y="350" />
+  <object gid="40" height="39" id="765" type="barrel_reg" width="30" x="934" y="248" />
+  <object gid="43" height="60" id="766" type="crate_rambi" width="94" x="368" y="336" />
+  <object gid="49" height="15" id="767" type="token_ost" width="15" x="437" y="311" />
+  <object gid="114" height="38" id="769" type="sign_exit" width="32" x="708" y="147" />
+  <object destination="cave" gid="23" height="39" id="839" type="teleporter" width="30" x="72.3494" y="334.918">
+   <properties>
+    <property name="destination" value="cave" />
+    <property name="gid" type="int" value="23" />
+   </properties>
+  </object>
+  <object destination="dkroom" gid="23" height="39" id="771" type="teleporter" width="30" x="-7" y="144.5">
+   <properties>
+    <property name="destination" value="dkroom" />
+   </properties>
+  </object>
+  <object destination="beginning" gid="23" height="39" id="781" type="teleporter" width="30" x="241" y="660.5">
+   <properties>
+    <property name="destination" value="beginning" />
+   </properties>
+  </object>
+  <object destination="beginningcave" gid="23" height="39" id="782" type="teleporter" width="30" x="468" y="709.5">
+   <properties>
+    <property name="destination" value="beginningcave" />
+   </properties>
+  </object>
+  <object destination="cavebananas" gid="23" height="39" id="912" type="teleporter" width="30" x="3538.21" y="406.203">
+   <properties>
+    <property name="destination" value="cavebananas" />
+   </properties>
+  </object>
+  <object destination="mainbananas" gid="23" height="39" id="913" type="teleporter" width="30" x="4175.76" y="678.291">
+   <properties>
+    <property name="destination" value="mainbananas" />
+   </properties>
+  </object>
+  <object gid="3" height="19" id="919" type="banana_bunch" width="23" x="358.48" y="656.877" />
+  <object gid="3" height="19" id="920" type="banana_bunch" width="23" x="333.38" y="611.696" />
+  <object gid="3" height="19" id="921" type="banana_bunch" width="23" x="320.327" y="676.957" />
+  <object gid="19" height="58" id="922" type="balloon_life" width="23" x="30.1667" y="649.425" />
+  <object gid="19" height="58" id="924" type="balloon_life" width="23" x="3689.3" y="595.498" />
+  <object gid="8" height="16" id="925" type="banana_single" width="12" x="3652.63" y="451.839" />
+  <object gid="8" height="16" id="926" type="banana_single" width="12" x="3421.72" y="665.647" />
+  <object gid="8" height="16" id="927" type="banana_single" width="12" x="3384.57" y="663.639" />
+  <object gid="8" height="16" id="928" type="banana_single" width="12" x="3342.41" y="661.631" />
+  <object gid="8" height="16" id="930" type="banana_single" width="12" x="3343.9" y="627.542" />
+  <object gid="8" height="16" id="931" type="banana_single" width="12" x="3386.06" y="629.55" />
+  <object gid="8" height="16" id="932" type="banana_single" width="12" x="3423.21" y="631.558" />
+  <object gid="8" height="16" id="933" type="banana_single" width="12" x="3345.91" y="590.394" />
+  <object gid="8" height="16" id="934" type="banana_single" width="12" x="3388.07" y="592.402" />
+  <object gid="8" height="16" id="935" type="banana_single" width="12" x="3425.22" y="594.41" />
+  <object gid="8" height="16" id="945" type="banana_single" width="12" x="3462.12" y="631.08" />
+  <object gid="8" height="16" id="946" type="banana_single" width="12" x="3464.13" y="593.932" />
+  <object gid="8" height="16" id="947" type="banana_single" width="12" x="3460.63" y="665.169" />
+  <object gid="8" height="16" id="948" type="banana_single" width="12" x="3502.79" y="667.177" />
+  <object gid="8" height="16" id="949" type="banana_single" width="12" x="3541.43" y="635.096" />
+  <object gid="8" height="16" id="950" type="banana_single" width="12" x="3504.28" y="633.088" />
+  <object gid="8" height="16" id="951" type="banana_single" width="12" x="3506.29" y="595.94" />
+  <object gid="8" height="16" id="952" type="banana_single" width="12" x="3539.94" y="669.185" />
+  <object gid="8" height="16" id="953" type="banana_single" width="12" x="3543.44" y="597.948" />
+  <object gid="8" height="16" id="954" type="banana_single" width="12" x="3585.61" y="636.1" />
+  <object gid="8" height="16" id="955" type="banana_single" width="12" x="3587.62" y="598.952" />
+  <object gid="8" height="16" id="956" type="banana_single" width="12" x="3584.12" y="670.189" />
+  <object gid="8" height="16" id="957" type="banana_single" width="12" x="3626.28" y="672.197" />
+  <object gid="8" height="16" id="958" type="banana_single" width="12" x="3664.92" y="640.116" />
+  <object gid="8" height="16" id="959" type="banana_single" width="12" x="3627.77" y="638.108" />
+  <object gid="8" height="16" id="960" type="banana_single" width="12" x="3629.78" y="600.96" />
+  <object gid="8" height="16" id="961" type="banana_single" width="12" x="3663.43" y="674.205" />
+  <object gid="8" height="16" id="962" type="banana_single" width="12" x="3666.93" y="602.968" />
+  <object gid="8" height="16" id="963" type="banana_single" width="12" x="3730.19" y="634.092" />
+  <object gid="8" height="16" id="965" type="banana_single" width="12" x="3728.7" y="668.181" />
+  <object gid="8" height="16" id="966" type="banana_single" width="12" x="3770.86" y="670.189" />
+  <object gid="8" height="16" id="967" type="banana_single" width="12" x="3809.5" y="638.108" />
+  <object gid="8" height="16" id="968" type="banana_single" width="12" x="3772.35" y="636.1" />
+  <object gid="8" height="16" id="970" type="banana_single" width="12" x="3808.01" y="672.197" />
+  <object gid="8" height="16" id="972" type="banana_single" width="12" x="3930.99" y="639.614" />
+  <object gid="8" height="16" id="973" type="banana_single" width="12" x="3929.5" y="673.703" />
+  <object gid="8" height="16" id="974" type="banana_single" width="12" x="3850.19" y="669.687" />
+  <object gid="8" height="16" id="975" type="banana_single" width="12" x="3892.35" y="671.695" />
+  <object gid="8" height="16" id="976" type="banana_single" width="12" x="3851.68" y="635.598" />
+  <object gid="8" height="16" id="977" type="banana_single" width="12" x="3893.84" y="637.606" />
+  <object gid="8" height="16" id="978" type="banana_single" width="12" x="4045.44" y="638.61" />
+  <object gid="8" height="16" id="979" type="banana_single" width="12" x="4043.95" y="672.699" />
+  <object gid="8" height="16" id="980" type="banana_single" width="12" x="3964.64" y="668.683" />
+  <object gid="8" height="16" id="981" type="banana_single" width="12" x="4006.8" y="670.691" />
+  <object gid="8" height="16" id="982" type="banana_single" width="12" x="3966.13" y="634.594" />
+  <object gid="8" height="16" id="983" type="banana_single" width="12" x="4008.29" y="636.602" />
+  <object gid="8" height="16" id="984" type="banana_single" width="12" x="4087.12" y="635.096" />
+  <object gid="8" height="16" id="985" type="banana_single" width="12" x="4089.13" y="597.948" />
+  <object gid="8" height="16" id="986" type="banana_single" width="12" x="4085.63" y="669.185" />
+  <object gid="8" height="16" id="987" type="banana_single" width="12" x="4127.79" y="671.193" />
+  <object gid="8" height="16" id="988" type="banana_single" width="12" x="4129.28" y="637.104" />
+  <object gid="8" height="16" id="989" type="banana_single" width="12" x="4131.29" y="599.956" />
+ </objectgroup>
+ <objectgroup name="EnemyLayer">
+  <object gid="80" height="31" id="323" type="enemy_gnawty" width="38" x="520" y="338" />
+  <object gid="96" height="42" id="330" type="enemy_kritter" width="51" x="1000" y="251" />
+  <object gid="96" height="42" id="343" type="enemy_kritter" width="51" x="1346" y="260" />
+  <object gid="96" height="42" id="344" type="enemy_kritter" width="51" x="1503" y="258" />
+  <object gid="88" height="64" id="345" type="enemy_klump" width="50" x="1893" y="308" />
+  <object gid="88" height="64" id="346" type="enemy_klump" width="50" x="1784" y="312" />
+  <object gid="104" height="45" id="366" type="enemy_necky" width="61" x="2537" y="252" />
+  <object gid="80" height="31" id="368" type="enemy_gnawty" width="38" x="3146" y="376" />
+  <object gid="80" height="31" id="369" type="enemy_gnawty" width="38" x="3219" y="367" />
+  <object gid="80" height="31" id="370" type="enemy_gnawty" width="38" x="3057" y="389" />
+  <object gid="96" height="42" id="375" type="enemy_kritter" width="51" x="4451" y="223" />
+  <object gid="96" height="42" id="376" type="enemy_kritter" width="51" x="4947" y="402" />
+  <object gid="96" height="42" id="377" type="enemy_kritter" width="51" x="3941" y="219" />
+  <object gid="88" height="64" id="382" type="enemy_klump" width="50" x="4527" y="407" />
+ </objectgroup>
+</map>

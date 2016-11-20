@@ -458,7 +458,6 @@
   <object gid="19" height="58" id="763" type="balloon_life" width="23" x="630" y="144" />
   <object gid="26" height="38" id="764" type="barrel_check" width="29" x="873" y="350" />
   <object gid="40" height="39" id="765" type="barrel_reg" width="30" x="934" y="248" />
-  <object gid="43" height="60" id="766" type="crate_rambi" width="94" x="368" y="336" />
   <object gid="49" height="15" id="767" type="token_ost" width="15" x="437" y="311" />
   <object gid="114" height="38" id="769" type="sign_exit" width="32" x="708" y="147" />
   <object destination="cave" gid="23" height="39" id="839" type="teleporter" width="30" x="72.3494" y="334.918">

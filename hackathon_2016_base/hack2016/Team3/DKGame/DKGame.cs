@@ -78,6 +78,7 @@ namespace DKGame
 		 */
 		protected override void Update(GameTime gameTime)
 		{
+            //InputSimulator.SimulateKeyDown(VirtualKeyCode.VK_X);
             if (!paused) {
                 PhysicsWorld.Instance.Update(gameTime);
                 foreach (IGameController controller in inputControllers)
@@ -92,10 +93,9 @@ namespace DKGame
                     controller.ProcessUpdate();
                 }
             }
-            InputSimulator test = new InputSimulator();
-            test.Keyboard.KeyDown(WindowsInput.Native.VirtualKeyCode.VK_X);
-            test.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.VK_X);
-            //inputControllers.Add(WindowsInput.Native.VirtualKeyCode.VK_X);
+            
+            Test.move();
+            //InputSimulator.SimulateKeyUp(VirtualKeyCode.VK_X);
             base.Update(gameTime);
         }
 

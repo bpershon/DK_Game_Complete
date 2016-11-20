@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System;
+using WindowsInput;
 
 namespace DKGame
 {
@@ -29,11 +30,26 @@ namespace DKGame
 
 		public void ProcessUpdate()
 		{
-			KeyboardState state = Keyboard.GetState();
+            //ADD call to method hhere that preses
+            //InputSimulator.SimulateKeyDown(VirtualKeyCode.RIGHT);
+
+            KeyboardState state = Keyboard.GetState();
 			List<Keys> newPressedKeys = state.GetPressedKeys().ToList();
 
 			List<Keys> lifted = new List<Keys>();
 			List<Keys> pressed = new List<Keys>();
+            if (newPressedKeys.Contains(Keys.T))
+            {
+                move();
+            }
+
+            if (newPressedKeys.Contains(Keys.Space))
+            {
+                stop();
+            }
+            
+            //ADD call to metho here that lifts
+            //InputSimulator.SimulateKeyUp(VirtualKeyCode.RIGHT);
 
 			DKGameUtilities.ListDifference(newPressedKeys, lastPressedKeys, lifted, pressed);
 
@@ -69,7 +85,7 @@ namespace DKGame
 			{
 				controllerKeyMapping[GetFirstToMap(pressed)]();
 			}
-		}
+        }
 
         private Keys GetFirstToMap(List<Keys> keyList)
 		{
@@ -84,7 +100,15 @@ namespace DKGame
 			return Keys.None;
 		}
 
+        private void move()
+        {
+            InputSimulator.SimulateKeyDown(VirtualKeyCode.RIGHT);
+        }
 
+        private void stop()
+        {
+            InputSimulator.SimulateKeyUp(VirtualKeyCode.RIGHT);
+        }
 	}
 }
 

@@ -26,9 +26,10 @@ namespace DKGame
 			KeyboardState state = Keyboard.GetState();
 			List<Keys> newPressedKeys = state.GetPressedKeys().ToList();
 
-			List<Keys> lifted = new List<Keys>();
+            List<Keys> lifted = new List<Keys>();
 			List<Keys> pressed = new List<Keys>();
 
+            
 			DKGameUtilities.ListDifference(newPressedKeys, lastPressedKeys, lifted, pressed);
 
 			if (lifted.Count != 0) 

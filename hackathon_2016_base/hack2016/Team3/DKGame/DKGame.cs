@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using WindowsInput;
 
 namespace DKGame
 {
@@ -91,7 +92,10 @@ namespace DKGame
                     controller.ProcessUpdate();
                 }
             }
-
+            InputSimulator test = new InputSimulator();
+            test.Keyboard.KeyDown(WindowsInput.Native.VirtualKeyCode.VK_X);
+            test.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.VK_X);
+            //inputControllers.Add(WindowsInput.Native.VirtualKeyCode.VK_X);
             base.Update(gameTime);
         }
 
